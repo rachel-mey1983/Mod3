@@ -16,7 +16,7 @@ def remove_book(book_list, title):
     print ( 'Book Not Found.' )  # If the book is not found in the list
 
 
-def search_book(book_list, title):
+def search_book(book_list: object, title: object) -> None:
     book: object
     for book in book_list:  # Iterate through the list to find the book
         if book == title:
@@ -41,9 +41,12 @@ book_list_modifiable = convert_to_lists ( book_tuples )  # Convert the list of t
 add_book ( book_list_modifiable,
            ['A Brief History of Time', 'Stephen Hawking'] )
 remove_book ( book_list_modifiable,
-              '1984' )  # The erroneous call to undefined function 'add_book'
+              '1984' ) 
+
+# The erroneous call to undefined function 'add_book'
 # has been removed.remove_book (books_list_modifiable, '1984')
 # Remove a book from the list
+
 search_book ( book_list_modifiable,
               'To Kill A Mockingbird' )
 
